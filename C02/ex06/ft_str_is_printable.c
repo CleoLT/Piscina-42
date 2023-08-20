@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] < 65 || str[i] > 90) && (str[i] < 97 || str[i] > 122))
+		if (str[i] < 32 || str[i] > 126)
 			return (0);
 		i++;
 	}
@@ -16,6 +16,6 @@ int	ft_str_is_alpha(char *str)
 
 int	main(int argc, char **argv)
 {
-	printf("%d", ft_str_is_alpha(argv[1]));
+	printf("%d", ft_str_is_printable(*argv));
 	return (0);
 }
