@@ -6,7 +6,7 @@
 /*   By: ale-tron <ale-tron@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:19:29 by ale-tron          #+#    #+#             */
-/*   Updated: 2023/08/21 16:06:43 by ale-tron         ###   ########.fr       */
+/*   Updated: 2023/08/22 16:18:06 by ale-tron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -14,13 +14,13 @@
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < size)
 	{
-			dest[i] = src[i];
-			i++;
+		dest[i] = src[i];
+		i++;
 	}
 	dest[size] = '\0';
 	return (0);
